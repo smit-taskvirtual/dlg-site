@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+/*
+  Brand theme tokens.
+  These map to Tailwind utility classes (e.g. bg-navy, text-ink, border-line).
+  Colors follow the DLG institutional palette defined in the design brief.
+*/
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-navy: #062b55;
+  --color-cobalt: #0b56b3;
+  --color-support: #2d78d1;
+  --color-gold: #c99b2b;
+  --color-sky: #edf4fb;
+  --color-ink: #12263f;
+  --color-muted: #5f7188;
+  --color-line: #d6e2f0;
+
+  /* Refined editorial motion curve used across the site. */
+  --ease-out-cubic: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Visible, consistent focus ring for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--color-cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Thin editorial gold rule used for eyebrow accents. */
+.gold-rule {
+  background: linear-gradient(90deg, var(--color-gold), rgba(201, 155, 43, 0));
+}
+
+/* Subtle blueprint grid used behind select editorial sections. */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(13, 86, 179, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 86, 179, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Respect users who prefer reduced motion at the document level. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
