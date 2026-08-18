@@ -1,5 +1,6 @@
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import DecoratedImage from './DecoratedImage'
 import { purpose, images } from '../content'
 
 /**
@@ -20,17 +21,11 @@ export default function Purpose() {
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
           {/* Editorial image */}
           <Reveal className="order-2 lg:order-1">
-            <figure>
-              <img
-                src={images.purpose}
-                alt="A small group of students leaning in to a thoughtful academic conversation"
-                className="aspect-[4/3] w-full rounded-sm border border-line object-cover"
-                loading="lazy"
-              />
-              <figcaption className="mt-3 text-xs text-muted">
-                Where debate begins — students, curiosity, and collaboration.
-              </figcaption>
-            </figure>
+            <DecoratedImage
+              src={images.purpose}
+              alt="A small group of students leaning in to a thoughtful academic conversation"
+              caption="Where debate begins — students, curiosity, and collaboration."
+            />
           </Reveal>
 
           {/* Stage progression */}

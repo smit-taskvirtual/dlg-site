@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react'
 import { brand, navLinks, footer } from '../content'
+import TravelingRule from './TravelingRule'
 
 // Inline SVG — brand icons (e.g. LinkedIn) were removed from recent lucide-react.
 function LinkedinIcon({ className }: { className?: string }) {
@@ -26,6 +27,7 @@ function LinkedinIcon({ className }: { className?: string }) {
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-white" aria-label="Footer">
+      <TravelingRule accent="gold" height="h-[2px]" />
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         {/* Brand */}
         <div>

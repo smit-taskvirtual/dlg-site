@@ -1,6 +1,7 @@
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { ArrowRight, ArrowDown } from 'lucide-react'
 import { hero, images } from '../content'
+import DecoratedImage from './DecoratedImage'
 
 // Typed as a tuple so Framer Motion accepts the cubic-bezier array.
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
@@ -163,17 +164,16 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative overflow-hidden rounded-sm border border-line">
-            <img
+          <div className="relative">
+            <DecoratedImage
               src={images.hero}
               alt="Diverse students collaborating on a laptop during an engaging discussion"
-              className="aspect-[4/3] w-full object-cover"
+              aspect="aspect-[4/3]"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/10 to-transparent" aria-hidden="true" />
+            <div className="pointer-events-none absolute inset-0 rounded-sm bg-gradient-to-t from-navy/10 to-transparent" aria-hidden="true" />
           </div>
           <HeroNetwork />
-
           {/* Floating credential card */}
           <motion.div
             {...(reduce ? {} : { animate: { y: [0, -8, 0] }, transition: { duration: 7, repeat: Infinity, ease: 'easeInOut' } })}

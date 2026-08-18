@@ -28,7 +28,6 @@ export const navLinks = [
 export const images = {
   hero: '/images/hero-debate.jpg',
   purpose: '/images/students-study.jpg',
-  network: '/images/lecture-hall.jpg',
   classroom: '/images/classroom.jpg',
   meeting: '/images/meeting.jpg',
   campus: '/images/campus.jpg',

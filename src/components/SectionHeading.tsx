@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import Reveal from './Reveal'
+import TravelingRule from './TravelingRule'
 
 type SectionHeadingProps = {
   eyebrow?: string
@@ -33,7 +34,7 @@ export default function SectionHeading({
           <span className={`text-xs font-bold uppercase tracking-[0.28em] ${tone === 'dark' ? 'text-gold' : 'text-cobalt'}`}>
             {eyebrow}
           </span>
-          <span className="gold-rule h-px w-12" aria-hidden="true" />
+          <TravelingRule width={48} height="h-[2px]" />
         </div>
       )}
       <h2 className={`max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem] ${titleColor}`}>

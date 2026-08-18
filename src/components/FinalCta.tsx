@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import TravelingRule from './TravelingRule'
 import { ArrowRight } from 'lucide-react'
 import { finalCta } from '../content'
 
@@ -12,11 +13,9 @@ export default function FinalCta() {
     <section id="contact" className="scroll-mt-24 relative overflow-hidden bg-navy py-24 sm:py-32" aria-labelledby="cta-title">
       <div className="pointer-events-none absolute inset-0 blueprint-grid opacity-20" aria-hidden="true" />
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
-        <Reveal>
-          <span className="gold-rule mx-auto block h-px w-16" aria-hidden="true" />
-        </Reveal>
+        <TravelingRule className="mx-auto mb-10" accent="gold" height="h-[2px]" width={96} />
         <Reveal delay={0.05}>
-          <h2 id="cta-title" className="mt-10 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 id="cta-title" className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             {finalCta.headline}
           </h2>
         </Reveal>

@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { CheckCircle2, Mail, ArrowRight } from 'lucide-react'
 import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
+import DecoratedImage from './DecoratedImage'
 import { insights, images } from '../content'
 
 /**
@@ -113,11 +114,10 @@ export default function Insights() {
         </div>
 
         <Reveal>
-          <img
+          <DecoratedImage
             src={images.classroom}
             alt="A student engaged and focused in a classroom setting"
-            className="aspect-[4/3] w-full rounded-sm border border-line object-cover"
-            loading="lazy"
+            aspect="aspect-[4/3]"
           />
         </Reveal>
       </div>

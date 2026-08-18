@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import TravelingRule from './TravelingRule'
 
 /**
  * Philosophy
@@ -14,12 +15,9 @@ export default function Philosophy() {
     <section className="relative overflow-hidden bg-navy py-24 sm:py-32" aria-label="Our philosophy">
       <div className="pointer-events-none absolute inset-0 blueprint-grid opacity-20" aria-hidden="true" />
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
+        <TravelingRule className="mb-12" accent="gold" height="h-[2px]" />
         <Reveal>
-          <span className="gold-rule mx-auto block h-px w-16" aria-hidden="true" />
-        </Reveal>
-
-        <Reveal delay={0.05}>
-          <p className="mt-10 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <p className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             We don’t teach debate.
           </p>
         </Reveal>
@@ -36,6 +34,8 @@ export default function Philosophy() {
             reliable funding, and the leadership to sustain them for generations.
           </p>
         </Reveal>
+
+        <TravelingRule className="mt-14" accent="cobalt" height="h-[2px]" />
       </div>
     </section>
   )

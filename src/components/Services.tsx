@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import SectionHeading from './SectionHeading'
 import ServiceIcon from './ServiceIcon'
+import TravelingRule from './TravelingRule'
 import { services } from '../content'
 
 /**
@@ -19,6 +20,7 @@ export default function Services() {
     <section id="services" className="scroll-mt-24 bg-sky py-20 sm:py-28" aria-labelledby="services-title">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading eyebrow="What We Do" title={services.title} />
+        <TravelingRule className="mt-14" accent="cobalt" height="h-[2px]" />
 
         <ul className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {services.items.map((service) => (
