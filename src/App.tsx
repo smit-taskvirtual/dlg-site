@@ -1,32 +1,21 @@
-import Topbar from './components/Topbar'
-import QuickLinks from './components/QuickLinks'
-import Hero from './components/Hero'
-import IntroGrid from './components/IntroGrid'
-import EventsSection from './components/EventsSection'
-import CalendarSection from './components/CalendarSection'
-import LatestSection from './components/LatestSection'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import OurVersionPage from './our-version/OurVersionPage'
 
 /**
  * App
  * ---------------------------------------------------------------------------
- * Page composition mirrors theme/theme.html exactly:
- * topbar -> quick links -> hero image -> intro/impact + sidebar ->
- * events strip -> calendar grid -> latest cards -> footer.
+ * Routes:
+ *   /             -> the original homepage (unchanged)
+ *   /our-version  -> an entirely new modern design with the same content.
+ *                    Not linked from the main site; reachable by URL only.
  */
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-graytext antialiased">
-      <Topbar />
-      <QuickLinks />
-      <main>
-        <Hero />
-        <IntroGrid />
-        <EventsSection />
-        <CalendarSection />
-        <LatestSection />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/our-version" element={<OurVersionPage />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   )
 }
