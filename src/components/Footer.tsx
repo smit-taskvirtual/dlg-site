@@ -1,17 +1,10 @@
 import { Mail } from 'lucide-react'
-import { brand, navLinks, footer } from '../content'
-import TravelingRule from './TravelingRule'
+import { footer, navLinks, products } from '../content'
 
-// Inline SVG — brand icons (e.g. LinkedIn) were removed from recent lucide-react.
-function LinkedinIcon({ className }: { className?: string }) {
+function LinkedInIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      className={className}
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.4c0-1.53-.03-3.5-2.13-3.5-2.13 0-2.46 1.67-2.46 3.39V23h-4V8z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
     </svg>
   )
 }
@@ -19,73 +12,92 @@ function LinkedinIcon({ className }: { className?: string }) {
 /**
  * Footer
  * ---------------------------------------------------------------------------
- * Institution-style footer: wordmark, mission, navigation, contact links.
- *
- * Note: LinkedIn and email links point to placeholder `#` values defined in
- * content.ts and marked for replacement before launch.
+ * Split footer matching theme.html: three link columns + copyright on the
+ * left, a gray "Connect" panel with subscribe button and socials on the
+ * right. Content is drawn from the DLG content file.
  */
 export default function Footer() {
-  return (
-    <footer className="border-t border-line bg-white" aria-label="Footer">
-      <TravelingRule accent="gold" height="h-[2px]" />
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
-        {/* Brand */}
-        <div>
-          <a href="#top" className="inline-flex flex-col leading-none" aria-label={`${brand.name} home`}>
-            <span className="text-base font-extrabold tracking-[0.18em] text-navy">{brand.wordmarkTop}</span>
-            <span className="mt-0.5 text-xs font-semibold tracking-[0.52em] text-gold">{brand.wordmarkBottom}</span>
-          </a>
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">{footer.mission}</p>
-        </div>
+  const subscribe = () => {
+    window.alert('Thank you — subscription functionality will be connected soon.')
+  }
 
-        {/* Navigation */}
-        <nav aria-label="Footer">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-ink">Explore</h3>
-          <ul className="mt-4 space-y-3">
+  return (
+    <footer className="bg-tb text-white">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-[3fr_1.3fr]">
+      <div className="grid grid-cols-3 gap-[35px] px-[78px] pb-[90px] pt-[30px]">
+        <div>
+          <h3 className="mb-[13px] text-[21px] font-bold">EXPLORE</h3>
+          <p className="text-xs leading-[1.45] text-[#eee]">
             {navLinks.map((link) => (
-              <li key={link.label}>
-                <a href={link.href} className="text-sm text-muted transition-colors hover:text-cobalt">
+              <span key={link.label}>
+                <a href={link.href} className="hover:text-white/60">
                   {link.label}
                 </a>
-              </li>
+                <br />
+              </span>
             ))}
-          </ul>
-        </nav>
-
-        {/* Contact */}
-        <div>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-ink">Connect</h3>
-          <ul className="mt-4 space-y-3">
-            <li>
-              <a
-                href={footer.social.linkedin}
-                aria-label="Debate Leaders Global on LinkedIn (placeholder link)"
-                className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-cobalt"
-              >
-                <LinkedinIcon className="h-4 w-4" /> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href={footer.social.email}
-                aria-label="Email Debate Leaders Global (placeholder link)"
-                className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-cobalt"
-              >
-                <Mail className="h-4 w-4" aria-hidden="true" /> Email us
-              </a>
-            </li>
-          </ul>
+          </p>
         </div>
+        <div>
+          <h3 className="mb-[13px] text-[21px] font-bold">PARTICIPATE</h3>
+          <p className="text-xs leading-[1.45] text-[#eee]">
+            {products.items.map((product) => (
+              <span key={product.name}>
+                <a href="#products" className="hover:text-white/60">
+                  {product.name.replace('™', '')}
+                </a>
+                <br />
+              </span>
+            ))}
+          </p>
+        </div>
+        <div>
+          <h3 className="mb-[13px] text-[21px] font-bold">SUPPORT</h3>
+          <p className="text-xs leading-[1.45] text-[#eee]">
+            <a href="#contact" className="hover:text-white/60">
+              Donate
+            </a>
+            <br />
+            <a href="#contact" className="hover:text-white/60">
+              Schedule a Blueprint Assessment
+            </a>
+            <br />
+            <a href={footer.attributionHref} className="hover:text-white/60">
+              {footer.attribution}
+            </a>
+          </p>
+        </div>
+        <div className="col-span-full mt-[50px] text-xs text-[#eee]">{footer.copyright}</div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-line">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 sm:flex-row sm:px-8">
-          <p className="text-xs text-muted">{footer.copyright}</p>
-          <a href={footer.attributionHref} target="_blank" rel="noopener noreferrer" className="text-xs text-muted underline underline-offset-2 transition-colors hover:text-cobalt">
-            {footer.attribution}
+      <div className="bg-fside px-5 py-[30px]">
+        <h3 className="mb-[13px] text-[21px] font-bold">CONNECT</h3>
+        <p className="text-xs leading-[1.45] text-[#eee]">{footer.mission}</p>
+        <p className="mt-8 text-xs text-[#eee]">Keep Me Informed</p>
+        <button
+          type="button"
+          onClick={subscribe}
+          className="mb-6 mt-[14px] inline-block rounded-[7px] bg-do px-[15px] py-3 text-[11px] font-bold text-white transition-colors hover:bg-[#d94d1d]"
+        >
+          SUBSCRIBE NOW
+        </button>
+        <div className="flex flex-wrap gap-[7px]">
+          <a
+            href={footer.social.linkedin}
+            aria-label="Debate Leaders Global on LinkedIn"
+            className="grid h-[34px] w-[34px] place-items-center bg-tb text-[14px] text-white transition-colors hover:bg-do"
+          >
+            <LinkedInIcon className="h-4 w-4" />
+          </a>
+          <a
+            href={footer.social.email}
+            aria-label="Email Debate Leaders Global"
+            className="grid h-[34px] w-[34px] place-items-center bg-tb text-[14px] text-white transition-colors hover:bg-do"
+          >
+            <Mail className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
+      </div>
       </div>
     </footer>
   )

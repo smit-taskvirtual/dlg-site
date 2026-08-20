@@ -1,22 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
 @import 'tailwindcss';
 
 /*
-  Brand theme tokens.
+  Brand theme tokens — restyled to match the ExpandED Schools reference theme.
   These map to Tailwind utility classes (e.g. bg-navy, text-ink, border-line).
-  Colors follow the DLG institutional palette defined in the design brief.
+
+  Palette (from the reference site's global color kit):
+    - orange #F15D22  primary / buttons / highlights
+    - charcoal #474C55 secondary / header / body text
+    - blue #005596 text & link color
+    - teal #26BCD7 accent
+    - lime #C1CD23 highlight accents
+    - light blue #56A0D3
+    - navy #203468 dark sections / headings
 */
 @theme {
-  --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Roboto', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --color-navy: #062b55;
-  --color-cobalt: #0b56b3;
-  --color-support: #2d78d1;
-  --color-gold: #c99b2b;
-  --color-sky: #edf4fb;
-  --color-ink: #12263f;
-  --color-muted: #5f7188;
-  --color-line: #d6e2f0;
+  --color-navy: #203468;
+  --color-cobalt: #f15d22;
+  --color-support: #26bcd7;
+  --color-gold: #c1cd23;
+  --color-sky: #f4f6f8;
+  --color-ink: #3c434a;
+  --color-muted: #6b7280;
+  --color-line: #e5e7eb;
+  --color-charcoal: #474c55;
+  --color-deepblue: #005596;
+  --color-orange-soft: #f5854f;
+
+  /* Exact palette from theme/theme.html */
+  --color-tb: #4b505c; /* topbar + footer */
+  --color-do: #f15a29; /* donate / orange accents */
+  --color-imporange: #ef6339; /* impact orange */
+  --color-impblue: #245a98; /* impact blue */
+  --color-impcyan: #4db3cf; /* impact cyan */
+  --color-imprime: #b8c936; /* impact lime */
+  --color-impborder: #b8ce31; /* impact col border */
+  --color-impborder2: #315b9c; /* 3rd impact col border */
+  --color-graybody: #777;
+  --color-graytext: #555b66;
+  --color-label: #555;
+  --color-qlabel: #3f434c;
+  --color-q1: #245a98;
+  --color-q2: #6388bb;
+  --color-q3: #6e9bc9;
+  --color-q4: #5aa5ca;
+  --color-q5: #70265e;
+  --color-q6: #276a7a;
+  --color-q7: #243e77;
+  --color-cardbar: #777a7f;
+  --color-fside: #92959b;
+  --color-hgray: #838790;
+  --color-eventsbg: #eee;
 
   /* Refined editorial motion curve used across the site. */
   --ease-out-cubic: cubic-bezier(0.22, 1, 0.36, 1);
@@ -34,6 +71,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Body copy reads in Roboto while headings/nav/buttons stay Montserrat. */
+p {
+  font-family: var(--font-body);
+}
+
 /* Visible, consistent focus ring for keyboard users. */
 :focus-visible {
   outline: 2px solid var(--color-cobalt);
@@ -41,16 +83,16 @@ body {
   border-radius: 2px;
 }
 
-/* Thin editorial gold rule used for eyebrow accents. */
+/* Thin brand rule used for eyebrow accents (orange fades out). */
 .gold-rule {
-  background: linear-gradient(90deg, var(--color-gold), rgba(201, 155, 43, 0));
+  background: linear-gradient(90deg, var(--color-cobalt), rgba(241, 93, 34, 0));
 }
 
 /* Subtle blueprint grid used behind select editorial sections. */
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(13, 86, 179, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 86, 179, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(32, 52, 104, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 52, 104, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 

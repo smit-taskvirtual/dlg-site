@@ -1,35 +1,30 @@
-import Navigation from './components/Navigation'
+import Topbar from './components/Topbar'
+import QuickLinks from './components/QuickLinks'
 import Hero from './components/Hero'
-import Purpose from './components/Purpose'
-import Philosophy from './components/Philosophy'
-import Services from './components/Services'
-import Products from './components/Products'
-import GlobalNetwork from './components/GlobalNetwork'
-import AIAdvisor from './components/AIAdvisor'
-import Insights from './components/Insights'
-import FinalCta from './components/FinalCta'
+import IntroGrid from './components/IntroGrid'
+import EventsSection from './components/EventsSection'
+import CalendarSection from './components/CalendarSection'
+import LatestSection from './components/LatestSection'
 import Footer from './components/Footer'
 
+/**
+ * App
+ * ---------------------------------------------------------------------------
+ * Page composition mirrors theme/theme.html exactly:
+ * topbar -> quick links -> hero image -> intro/impact + sidebar ->
+ * events strip -> calendar grid -> latest cards -> footer.
+ */
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-ink antialiased">
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-navy focus:px-4 focus:py-2 focus:text-sm focus:text-white"
-      >
-        Skip to content
-      </a>
-      <Navigation />
-      <main id="main">
+    <div className="min-h-screen bg-white font-sans text-graytext antialiased">
+      <Topbar />
+      <QuickLinks />
+      <main>
         <Hero />
-        <Purpose />
-        <Philosophy />
-        <Services />
-        <Products />
-        <GlobalNetwork />
-        <AIAdvisor />
-        <Insights />
-        <FinalCta />
+        <IntroGrid />
+        <EventsSection />
+        <CalendarSection />
+        <LatestSection />
       </main>
       <Footer />
     </div>
