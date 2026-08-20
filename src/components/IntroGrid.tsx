@@ -1,5 +1,5 @@
 import { Sparkles } from 'lucide-react'
-import { hero, purpose, aiAdvisor } from '../content'
+import { hero, purpose, aiAdvisor, images } from '../content'
 
 /**
  * IntroGrid
@@ -74,6 +74,24 @@ export default function IntroGrid() {
           >
             TRY THE ADVISOR
           </a>
+
+          <div className="relative mt-[22px] overflow-hidden rounded-[10px]">
+            <img
+              src={images.campus}
+              alt="Debate Leaders Global in action"
+              className="block h-[140px] w-full object-cover blur-[3px] brightness-[0.75]"
+            />
+            <button
+              type="button"
+              aria-label="Play video"
+              className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-do bg-black/35 text-[22px] text-do transition-colors hover:bg-do hover:text-white"
+            >
+              ▶
+            </button>
+          </div>
+          <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-label">
+            Watch: Building debate that lasts
+          </p>
         </aside>
       </div>
     </section>

@@ -29,7 +29,7 @@ export default function CalendarSection() {
         {services.items.slice(0, 4).map((service) => (
           <div
             key={service.title}
-            className="flex min-h-[45px] items-center justify-center bg-hgray p-2 text-center text-[10px] font-bold leading-tight text-white"
+            className="flex min-h-[45px] items-center justify-center bg-hgray p-2 text-center text-sm font-bold leading-tight text-white"
           >
             {service.title.toUpperCase()}
           </div>
@@ -37,7 +37,7 @@ export default function CalendarSection() {
 
         {rows.map((row, rowIndex) => (
           <Fragment key={rowIndex}>
-            <div className="flex items-center justify-center bg-eventsbg px-1 py-2 text-[8px] text-label">
+            <div className="flex items-center justify-center bg-eventsbg px-1 py-2 text-sm font-bold text-label">
               {String(rowIndex * 4 + 1).padStart(2, '0')}
             </div>
             {row.map((service, i) => {
@@ -54,9 +54,9 @@ export default function CalendarSection() {
                   />
                   <div className="mb-2 flex items-start gap-2">
                     <ServiceIcon name={service.icon} className="h-4 w-4 shrink-0 text-impblue" />
-                    <p className="text-[11px] font-bold leading-tight text-label">{service.title}</p>
+                    <p className="text-sm font-bold leading-tight text-label">{service.title}</p>
                   </div>
-                  <p className="text-[9px] leading-snug text-graybody">{service.copy}</p>
+                  <p className="text-xs leading-snug text-graybody">{service.copy}</p>
                 </div>
               )
             })}
@@ -64,7 +64,7 @@ export default function CalendarSection() {
         ))}
       </div>
 
-      <div className="mt-[14px] flex flex-wrap gap-x-7 gap-y-4 bg-white p-[15px] text-[10px]">
+      <div className="mt-[14px] flex flex-wrap gap-x-7 gap-y-4 bg-white p-[15px] text-xs">
         {services.items.map((service, i) => (
           <div key={service.title} className="flex min-w-[130px] items-center gap-[7px]">
             <span
