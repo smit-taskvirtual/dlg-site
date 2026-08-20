@@ -4,19 +4,20 @@ import { impact } from '../content'
 /**
  * Stats
  * ---------------------------------------------------------------------------
- * Modern metrics band: six impact figures as cards with brand-colored
- * accents, split across a responsive grid.
+ * Metrics band that replicates the main homepage's impact presentation
+ * exactly: three bordered columns with big brand-colored numbers, uppercase
+ * letter-spaced labels and dividing rules.
  */
-const accents = ['text-cobalt', 'text-support', 'text-gold', 'text-deepblue', 'text-support', 'text-cobalt']
+const numberColors = ['text-imporange', 'text-impblue', 'text-imprime', 'text-impcyan', 'text-impblue', 'text-imporange']
+const dividerColors = ['bg-imporange', 'bg-impblue', 'bg-impcyan']
+const borders = ['border-impborder', 'border-impborder', 'border-impborder2']
 
 export default function Stats() {
-  const metrics = impact.flat()
-
   return (
-    <section className="bg-sky py-20" aria-label="Impact in numbers">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section className="bg-white py-16" aria-label="Impact in numbers">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
         <Reveal>
-          <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-cobalt">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-gold">
             Impact in numbers
           </p>
           <h2 className="mt-3 text-center text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
@@ -24,25 +25,35 @@ export default function Stats() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {metrics.map((metric, i) => (
-            <Reveal key={metric.label} delay={i * 0.05}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-[0_4px_24px_rgba(32,52,104,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(32,52,104,0.14)]">
-                <span className="absolute right-0 top-0 h-20 w-20 translate-x-6 -translate-y-6 rounded-full bg-sky" aria-hidden="true" />
-                <p className={`text-5xl font-black tracking-tight ${accents[i % accents.length]}`}>
-                  {metric.number}
-                  {metric.suffix && (
-                    <span className="text-xl font-bold uppercase">{' '}{metric.suffix}</span>
-                  )}
-                </p>
-                <p className="mt-4 text-sm font-bold uppercase leading-snug tracking-[0.16em] text-ink">
-                  {metric.label}
-                </p>
-                {metric.sub && <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-muted">{metric.sub}</p>}
+        <Reveal delay={0.1}>
+          <div className="mx-auto mt-14 grid max-w-[960px] grid-cols-3">
+            {impact.map((column, colIndex) => (
+              <div
+                key={colIndex}
+                className={`flex min-h-[300px] flex-col justify-around border-l-[3px] px-[22px] py-[5px] text-center ${borders[colIndex]}`}
+              >
+                {column.map((metric, metricIndex) => {
+                  const colorIndex = colIndex * 2 + metricIndex
+                  return (
+                    <div key={metric.label}>
+                      <div className={`my-[5px] text-[40px] font-bold leading-[0.95] ${numberColors[colorIndex]}`}>
+                        {metric.number}
+                        {metric.suffix && <small className="text-base font-bold uppercase">{' '}{metric.suffix}</small>}
+                      </div>
+                      <div className="text-[12px] font-bold uppercase leading-snug tracking-[2px] text-label">
+                        {metric.label}
+                        {metric.sub && <span className="block">{metric.sub}</span>}
+                      </div>
+                      {metricIndex === 0 && (
+                        <div className={`divider mx-auto my-4 h-[3px] w-4/5 ${dividerColors[colIndex]}`} />
+                      )}
+                    </div>
+                  )
+                })}
               </div>
-            </Reveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   )

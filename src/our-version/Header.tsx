@@ -38,7 +38,7 @@ export default function Header() {
           <span className={`text-sm font-extrabold tracking-[0.18em] ${scrolled ? 'text-navy' : 'text-white'}`}>
             {brand.wordmarkTop}
           </span>
-          <span className="mt-0.5 text-[0.65rem] font-semibold tracking-[0.52em] text-cobalt">
+          <span className="mt-0.5 text-[0.65rem] font-semibold tracking-[0.52em] text-gold">
             {brand.wordmarkBottom}
           </span>
         </a>
@@ -48,7 +48,7 @@ export default function Header() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className={`text-xs font-bold uppercase tracking-wider transition-colors hover:text-cobalt ${
+                className={`text-xs font-bold uppercase tracking-wider transition-colors hover:text-gold ${
                   scrolled ? 'text-ink' : 'text-white'
                 }`}
               >
@@ -61,7 +61,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <a
             href={hero.primaryCtaHref}
-            className="inline-flex items-center gap-2 rounded-full bg-cobalt px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-cobalt/30 transition-all hover:bg-orange-soft"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-gold/30 transition-all hover:bg-gold"
           >
             {hero.primaryCta}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -99,7 +99,7 @@ export default function Header() {
                     <a
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-between py-4 text-sm font-bold uppercase tracking-wider text-navy hover:text-cobalt"
+                      className="flex items-center justify-between py-4 text-sm font-bold uppercase tracking-wider text-navy hover:text-gold"
                     >
                       {link.label}
                     </a>
@@ -109,7 +109,7 @@ export default function Header() {
               <a
                 href={hero.primaryCtaHref}
                 onClick={() => setOpen(false)}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cobalt px-5 py-3 text-xs font-bold uppercase tracking-wider text-white"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase tracking-wider text-white"
               >
                 {hero.primaryCta}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

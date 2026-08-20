@@ -42,8 +42,8 @@ export default function Hero() {
         className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-32 lg:px-10"
       >
         <motion.div variants={item} className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-cobalt/50 bg-cobalt/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-orange-soft backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-cobalt" aria-hidden="true" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-gold backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
             {hero.eyebrow}
           </span>
 
@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href={hero.primaryCtaHref}
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-cobalt px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-cobalt/40 transition-all hover:bg-orange-soft"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-gold/40 transition-all hover:bg-gold"
             >
               {hero.primaryCta}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -80,7 +80,7 @@ export default function Hero() {
               <dt className="sr-only">{metric.label}</dt>
               <dd className="text-2xl font-extrabold text-white sm:text-3xl">
                 {metric.number}
-                {metric.suffix && <span className="text-sm font-bold uppercase text-orange-soft"> {metric.suffix}</span>}
+                {metric.suffix && <span className="text-sm font-bold uppercase text-gold"> {metric.suffix}</span>}
               </dd>
               <dd className="mt-1 text-[11px] font-bold uppercase leading-snug tracking-[0.18em] text-white/70">
                 {metric.label}

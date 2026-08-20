@@ -25,7 +25,7 @@ export default function Insights() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div>
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-cobalt">Insights</p>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold">Insights</p>
               <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
                 {insights.title}
               </h2>
@@ -47,10 +47,10 @@ export default function Insights() {
 
           <Reveal delay={0.1}>
             <div className="rounded-3xl bg-navy p-10 text-white shadow-[0_20px_60px_rgba(32,52,104,0.3)]">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-soft">Stay informed</p>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">Stay informed</p>
               {submitted ? (
                 <p className="mt-5 flex items-start gap-3 text-sm text-white/90">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cobalt" aria-hidden="true" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" aria-hidden="true" />
                   {insights.successMessage}
                 </p>
               ) : (
@@ -66,11 +66,11 @@ export default function Insights() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder={insights.emailPlaceholder}
-                      className="flex-1 rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm text-white placeholder:text-white/50 focus:border-cobalt focus:outline-none focus:ring-2 focus:ring-cobalt/40"
+                      className="flex-1 rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm text-white placeholder:text-white/50 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40"
                     />
                     <button
                       type="submit"
-                      className="rounded-full bg-cobalt px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-orange-soft"
+                      className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-gold"
                     >
                       {insights.cta}
                     </button>

@@ -21,7 +21,7 @@ export default function Purpose() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-navy p-6 text-white shadow-xl sm:block">
-              <p className="text-4xl font-black text-cobalt">170</p>
+              <p className="text-4xl font-black text-gold">170</p>
               <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-white/80">
                 Years of Debate
                 <br />
@@ -33,7 +33,7 @@ export default function Purpose() {
 
         <div>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-cobalt">Our Purpose</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold">Our Purpose</p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl">
               {purpose.title}
             </h2>
@@ -44,7 +44,7 @@ export default function Purpose() {
             {purpose.stages.map((stage, i) => (
               <Reveal key={stage.step} delay={i * 0.06}>
                 <li className="relative flex gap-6 border-l-2 border-line pb-10 pl-8 last:pb-0">
-                  <span className="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-cobalt text-[11px] font-black text-white">
+                  <span className="absolute -left-[15px] flex h-7 w-7 items-center justify-center rounded-full bg-gold text-[11px] font-black text-white">
                     {stage.step}
                   </span>
                   <div>

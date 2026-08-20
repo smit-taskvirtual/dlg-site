@@ -18,7 +18,7 @@ export default function FinalCta() {
         <Reveal delay={0.1}>
           <a
             href={finalCta.ctaHref}
-            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-cobalt px-9 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-cobalt/40 transition-all hover:bg-orange-soft"
+            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-gold px-9 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-gold/40 transition-all hover:bg-gold"
           >
             {finalCta.cta}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

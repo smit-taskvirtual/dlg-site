@@ -44,7 +44,7 @@ export default function Advisor() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         <div>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-cobalt">AI Advisor</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold">AI Advisor</p>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
               {aiAdvisor.title}
             </h2>
@@ -57,7 +57,7 @@ export default function Advisor() {
                   key={prompt}
                   type="button"
                   onClick={() => selectPrompt(prompt)}
-                  className="rounded-full border border-cobalt/40 bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-cobalt hover:bg-cobalt hover:text-white"
+                  className="rounded-full border border-gold/40 bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-gold hover:bg-gold hover:text-white"
                 >
                   {prompt}
                 </button>
@@ -69,7 +69,7 @@ export default function Advisor() {
         <Reveal delay={0.15}>
           <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_50px_rgba(32,52,104,0.12)]">
             <div className="flex items-center gap-3 border-b border-line bg-navy px-6 py-5 text-white">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cobalt">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold">
                 <Sparkles className="h-5 w-5" aria-hidden="true" />
               </span>
               <div>
@@ -91,7 +91,7 @@ export default function Advisor() {
                     <div
                       className={
                         msg.role === 'user'
-                          ? 'max-w-[85%] rounded-2xl rounded-br-sm bg-cobalt px-5 py-3 text-sm text-white'
+                          ? 'max-w-[85%] rounded-2xl rounded-br-sm bg-gold px-5 py-3 text-sm text-white'
                           : 'max-w-[85%] rounded-2xl rounded-bl-sm bg-sky px-5 py-3 text-sm text-ink'
                       }
                     >

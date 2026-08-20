@@ -24,7 +24,7 @@ export default function Footer() {
         <div>
           <a href="#top" className="flex flex-col leading-none" aria-label={`${brand.name} home`}>
             <span className="text-sm font-extrabold tracking-[0.18em] text-white">{brand.wordmarkTop}</span>
-            <span className="mt-0.5 text-[0.65rem] font-semibold tracking-[0.52em] text-cobalt">
+            <span className="mt-0.5 text-[0.65rem] font-semibold tracking-[0.52em] text-gold">
               {brand.wordmarkBottom}
             </span>
           </a>
@@ -36,7 +36,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-white/70">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="transition-colors hover:text-orange-soft">
+                <a href={link.href} className="transition-colors hover:text-gold">
                   {link.label}
                 </a>
               </li>
@@ -49,7 +49,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-white/70">
             {products.items.slice(0, 4).map((product) => (
               <li key={product.name}>
-                <a href="#products" className="transition-colors hover:text-orange-soft">
+                <a href="#products" className="transition-colors hover:text-gold">
                   {product.name.replace('™', '')}
                 </a>
               </li>
@@ -63,14 +63,14 @@ export default function Footer() {
             <a
               href={footer.social.linkedin}
               aria-label="Debate Leaders Global on LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-cobalt"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold"
             >
               <LinkedInIcon className="h-4 w-4" />
             </a>
             <a
               href={footer.social.email}
               aria-label="Email Debate Leaders Global"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-cobalt"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
             </a>

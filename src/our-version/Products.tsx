@@ -19,7 +19,7 @@ export default function Products() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-cobalt">Signature products</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold">Signature products</p>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
               {products.title}
             </h2>
@@ -39,13 +39,13 @@ export default function Products() {
                     aria-controls={`ov-product-${index}`}
                     className="group flex w-full items-center gap-6 py-7 text-left"
                   >
-                    <span className="text-sm font-black tracking-widest text-cobalt">
+                    <span className="text-sm font-black tracking-widest text-gold">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="flex-1 text-xl font-bold text-navy transition-colors group-hover:text-cobalt sm:text-2xl">
+                    <span className="flex-1 text-xl font-bold text-navy transition-colors group-hover:text-gold sm:text-2xl">
                       {product.name}
                     </span>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line text-cobalt transition-colors group-hover:border-cobalt group-hover:bg-cobalt group-hover:text-white">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line text-gold transition-colors group-hover:border-gold group-hover:bg-gold group-hover:text-white">
                       {isOpen ? <Minus className="h-4 w-4" aria-hidden="true" /> : <Plus className="h-4 w-4" aria-hidden="true" />}
                     </span>
                   </button>
