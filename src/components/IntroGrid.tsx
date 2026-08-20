@@ -1,5 +1,5 @@
 import { Sparkles } from 'lucide-react'
-import { hero, purpose, aiAdvisor, images } from '../content'
+import { hero, purpose, aiAdvisor, images, impact } from '../content'
 
 /**
  * IntroGrid
@@ -9,11 +9,9 @@ import { hero, purpose, aiAdvisor, images } from '../content'
  * 270px sidebar on the right featuring the DLG AI Advisor concept preview.
  */
 export default function IntroGrid() {
-  const stats = [
-    { value: hero.proofPoints[0].value, label: hero.proofPoints[0].label, numberClass: 'text-imporange' },
-    { value: hero.proofPoints[1].value, label: hero.proofPoints[1].label, numberClass: 'text-impblue' },
-    { value: hero.proofPoints[2].value, label: hero.proofPoints[2].label, numberClass: 'text-impcyan' },
-  ]
+  const numberColors = ['text-imporange', 'text-impblue', 'text-imprime', 'text-impcyan', 'text-impblue', 'text-imporange']
+  const dividerColors = ['bg-imporange', 'bg-impblue', 'bg-impcyan']
+  const borders = ['border-impborder', 'border-impborder', 'border-impborder2']
 
   return (
     <section id="purpose" className="content-wrap mx-auto max-w-[1200px] px-[78px] pb-2.5 pt-6">
@@ -26,25 +24,31 @@ export default function IntroGrid() {
           <p className="mb-[30px] text-sm leading-[1.5] text-graybody">{purpose.copy}</p>
 
           <div className="mb-[45px] mt-[5px] grid grid-cols-3">
-            {stats.map((stat, i) => (
+            {impact.map((column, colIndex) => (
               <div
-                key={stat.label}
-                className={`flex min-h-[300px] flex-col justify-around px-[22px] py-[5px] text-center ${
-                  i === 0 ? 'border-l-[3px] border-impborder' : ''
-                } ${i === 1 ? 'border-l-[3px] border-impborder' : ''} ${
-                  i === 2 ? 'border-l-[3px] border-impborder2' : ''
-                }`}
+                key={colIndex}
+                className={`flex min-h-[300px] flex-col justify-around px-[22px] py-[5px] text-center ${borders[colIndex]} border-l-[3px]`}
               >
-                <div>
-                  <div className="text-xs font-bold tracking-[2px] text-label">{stat.label}</div>
-                  <div className={`my-[5px] text-[54px] font-bold leading-[0.95] ${stat.numberClass}`}>
-                    {stat.value}
-                  </div>
-                  <div className="small-label text-[13px] font-bold uppercase tracking-[2px]">
-                    {stat.label}
-                  </div>
-                </div>
-                <div className={`divider mx-auto my-1 h-[3px] w-4/5 ${i === 0 ? 'bg-imporange' : ''} ${i === 1 ? 'bg-impblue' : ''} ${i === 2 ? 'bg-impcyan' : ''}`} />
+                {column.map((metric, metricIndex) => {
+                  const colorIndex = colIndex * 2 + metricIndex
+                  return (
+                    <div key={metric.label}>
+                      <div className={`my-[5px] text-[40px] font-bold leading-[0.95] ${numberColors[colorIndex]}`}>
+                        {metric.number}
+                        {metric.suffix && (
+                          <small className="text-base font-bold uppercase">{' '}{metric.suffix}</small>
+                        )}
+                      </div>
+                      <div className="text-[12px] font-bold uppercase leading-snug tracking-[2px] text-label">
+                        {metric.label}
+                        {metric.sub && <span className="block">{metric.sub}</span>}
+                      </div>
+                      {metricIndex === 0 && (
+                        <div className={`divider mx-auto my-4 h-[3px] w-4/5 ${dividerColors[colIndex]}`} />
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             ))}
           </div>

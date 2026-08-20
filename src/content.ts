@@ -43,13 +43,29 @@ export const hero = {
   primaryCtaHref: '#contact',
   secondaryText: 'Explore our approach',
   secondaryHref: '#purpose',
-  // Plan-provided positioning figures — not independently verified.
-  proofPoints: [
-    { value: '50+', label: 'Years Combined Experience' },
-    { value: '60+', label: 'Countries Served' },
-    { value: 'Global', label: 'Network of Debate Experts' },
-  ],
 }
+
+/* -------------------------------------------------------------- Impact */
+
+/**
+ * Impact metrics shown in the three-column stats block under the intro.
+ * Each column holds two metrics: `number` (+ optional `suffix` shown smaller)
+ * with an uppercase `label` and optional `sub` sub-line.
+ */
+export const impact = [
+  [
+    { number: '2', suffix: 'MILLION', label: 'Pages of guides, manuals & curricula' },
+    { number: '>$2', suffix: 'BILLION', label: 'Global Market Size' },
+  ],
+  [
+    { number: '170', suffix: 'YEARS', label: "Leadership Team's Debate Experience" },
+    { number: '3,000', suffix: '+', label: 'Coaches Trained', sub: '9,300+ Debaters Trained' },
+  ],
+  [
+    { number: '112', suffix: '', label: 'Experts in the Database' },
+    { number: '74', suffix: '', label: 'Program Engagements', sub: '92% Success Rate' },
+  ],
+]
 
 /* -------------------------------------------------------------- Purpose */
 
