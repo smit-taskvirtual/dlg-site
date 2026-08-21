@@ -29,7 +29,7 @@ export default function Topbar() {
         ))}
         <a
           href={hero.primaryCtaHref}
-          className="bg-gold px-[27px] py-[14px] font-bold text-white transition-colors hover:bg-[#b08a1e]"
+          className="bg-gold px-[27px] py-[14px] font-bold text-white transition-colors hover:bg-[#e6c200]"
         >
           Schedule Blueprint Assessment
         </a>

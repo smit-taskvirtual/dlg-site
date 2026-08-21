@@ -12,16 +12,18 @@
     - teal #26BCD7 accent
     - lime #C1CD23 highlight accents
     - light blue #56A0D3
-    - navy #203468 dark sections / headings
+    - navy #000080 dark sections / headings
+    - cobalt #0047AB primary blue accents
+    - gold #FFD700 highlight accents / buttons
 */
 @theme {
   --font-sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-body: 'Roboto', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --color-navy: #203468;
-  --color-cobalt: #f15d22;
+  --color-navy: #000080;
+  --color-cobalt: #0047AB;
   --color-support: #26bcd7;
-  --color-gold: #c9a227;
+  --color-gold: #FFD700;
   --color-sky: #f4f6f8;
   --color-ink: #3c434a;
   --color-muted: #6b7280;
@@ -83,16 +85,16 @@ p {
   border-radius: 2px;
 }
 
-/* Thin brand rule used for eyebrow accents (orange fades out). */
+/* Thin brand rule used for eyebrow accents (cobalt fades out). */
 .gold-rule {
-  background: linear-gradient(90deg, var(--color-cobalt), rgba(241, 93, 34, 0));
+  background: linear-gradient(90deg, var(--color-cobalt), rgba(0, 71, 171, 0));
 }
 
 /* Subtle blueprint grid used behind select editorial sections. */
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(32, 52, 104, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(32, 52, 104, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 128, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 128, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 

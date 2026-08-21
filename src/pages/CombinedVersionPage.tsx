@@ -7,6 +7,7 @@ import Services from '../our-version/Services'
 import Products from '../our-version/Products'
 import Network from '../our-version/Network'
 import Advisor from '../combined-version/Advisor'
+import ScrollToTop from '../combined-version/ScrollToTop'
 import Insights from '../our-version/Insights'
 import FinalCta from '../our-version/FinalCta'
 import Footer from '../our-version/Footer'
@@ -36,6 +37,7 @@ export default function CombinedVersionPage() {
         <FinalCta />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

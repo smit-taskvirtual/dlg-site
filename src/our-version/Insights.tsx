@@ -46,7 +46,7 @@ export default function Insights() {
           </div>
 
           <Reveal delay={0.1}>
-            <div className="rounded-3xl bg-navy p-10 text-white shadow-[0_20px_60px_rgba(32,52,104,0.3)]">
+            <div className="rounded-3xl bg-navy p-10 text-white shadow-[0_20px_60px_rgba(0,0,128,0.3)]">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">Stay informed</p>
               {submitted ? (
                 <p className="mt-5 flex items-start gap-3 text-sm text-white/90">

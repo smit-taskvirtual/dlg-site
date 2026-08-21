@@ -87,7 +87,7 @@ export default function Advisor() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_50px_rgba(32,52,104,0.12)]">
+          <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[0_16px_50px_rgba(0,0,128,0.12)]">
             <div className="flex items-center gap-3 border-b border-line bg-navy px-6 py-5 text-white">
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold">
                 <Sparkles className="h-5 w-5" aria-hidden="true" />
@@ -143,7 +143,7 @@ export default function Advisor() {
               <button
                 type="submit"
                 aria-label="Send message"
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-white transition-colors hover:bg-[#b08a1e]"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-white transition-colors hover:bg-[#e6c200]"
               >
                 <Send className="h-4 w-4" aria-hidden="true" />
               </button>

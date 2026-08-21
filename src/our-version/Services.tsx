@@ -25,7 +25,7 @@ export default function Services() {
           {services.items.map((service, i) => (
             <li key={service.title}>
               <Reveal delay={i * 0.04}>
-                <div className="group h-full rounded-2xl border-t-4 border-gold bg-white p-7 shadow-[0_4px_20px_rgba(32,52,104,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(32,52,104,0.14)]">
+                <div className="group h-full rounded-2xl border-t-4 border-gold bg-white p-7 shadow-[0_4px_20px_rgba(0,0,128,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(0,0,128,0.14)]">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors group-hover:bg-gold group-hover:text-white">
                     <ServiceIcon name={service.icon} className="h-6 w-6" />
                   </div>

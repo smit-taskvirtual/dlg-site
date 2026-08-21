@@ -13,7 +13,7 @@ export default function Purpose() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         <Reveal>
           <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-[0_20px_60px_rgba(32,52,104,0.18)]">
+            <div className="overflow-hidden rounded-3xl shadow-[0_20px_60px_rgba(0,0,128,0.18)]">
               <img
                 src={images.purpose}
                 alt="Students studying together"
