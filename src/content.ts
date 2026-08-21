@@ -227,7 +227,7 @@ export const insights = {
 /* ------------------------------------------------------------ Final CTA */
 
 export const finalCta = {
-  headline: 'Every child deserves the opportunity to discover their voice.',
+  headline: 'Start a debate program, reach 20 kids. Make it sustainable and reach thousands.',
   body: 'Debate Leaders Global exists to ensure the organizations making this possible are built to last.',
   cta: 'Schedule a Blueprint Assessment',
   ctaHref: '#contact',
