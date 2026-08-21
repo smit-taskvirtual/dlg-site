@@ -14,7 +14,7 @@
     - light blue #56A0D3
     - navy #000080 dark sections / headings
     - cobalt #0047AB primary blue accents
-    - gold #FFD700 highlight accents / buttons
+    - gold #d4af37 highlight accents / buttons
 */
 @theme {
   --font-sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -23,7 +23,7 @@
   --color-navy: #000080;
   --color-cobalt: #0047AB;
   --color-support: #26bcd7;
-  --color-gold: #FFD700;
+  --color-gold: #d4af37;
   --color-sky: #f4f6f8;
   --color-ink: #3c434a;
   --color-muted: #6b7280;

@@ -44,7 +44,7 @@ export default function ScrollToTop() {
           whileHover={{ y: -4 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-          className="group fixed bottom-6 right-6 z-50 grid place-items-center rounded-full bg-navy text-white shadow-[0_12px_32px_rgba(0,0,128,0.35)] transition-shadow hover:shadow-[0_16px_40px_rgba(255,215,0,0.45)]"
+          className="group fixed bottom-6 right-6 z-50 grid place-items-center rounded-full bg-navy text-white shadow-[0_12px_32px_rgba(0,0,128,0.35)] transition-shadow hover:shadow-[0_16px_40px_rgba(212,175,55,0.45)]"
           style={{ width: SIZE, height: SIZE }}
         >
           <svg

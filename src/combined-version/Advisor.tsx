@@ -143,7 +143,7 @@ export default function Advisor() {
               <button
                 type="submit"
                 aria-label="Send message"
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-white transition-colors hover:bg-[#e6c200]"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-white transition-colors hover:bg-[#b8952f]"
               >
                 <Send className="h-4 w-4" aria-hidden="true" />
               </button>
